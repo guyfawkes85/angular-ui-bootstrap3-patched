@@ -3558,42 +3558,34 @@ angular.module("template/tabs/tabset.html", []).run(["$templateCache", function(
 angular.module("template/timepicker/timepicker.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("template/timepicker/timepicker.html",
     "<span>\n" +
-    "    <div class=\"row\">\n" +
-    "        <div class=\"col-xs-4 text-center\">\n" +
-    "            <a ng-click=\"incrementHours()\" class=\"btn btn-link\"><i class=\"glyphicon glyphicon-chevron-up\"></i></a>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-xs-6 text-center\">\n" +
-    "            <a ng-click=\"incrementMinutes()\" class=\"btn btn-link\"><i class=\"glyphicon glyphicon-chevron-up\"></i></a>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-xs-2\"> </div>\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <div class=\"row\">\n" +
-    "        <div class=\"col-xs-4\">\n" +
-    "            <div class=\"form-group\" ng-class=\"{'has-error': invalidHours}\" style=\"margin-bottom: 0px\">\n" +
-    "                <input type=\"text\" ng-model=\"hours\" ng-change=\"updateHours()\" class=\"form-control text-center\" ng-mousewheel=\"incrementHours()\" ng-readonly=\"readonlyInput\" maxlength=\"2\"> \n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-xs-6\">\n" +
-    "            <div class=\"input-group\" ng-class=\"{'has-error': invalidMinutes}\">\n" +
-    "                <span class=\"input-group-addon\">:</span>\n" +
-    "                <input type=\"text\" ng-model=\"minutes\" ng-change=\"updateMinutes()\" class=\"form-control text-center\" ng-readonly=\"readonlyInput\" maxlength=\"2\">\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-xs-2\">\n" +
-    "            <button ng-click=\"toggleMeridian()\" class=\"btn btn-default text-center\" ng-show=\"showMeridian\">{{meridian}}</button>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <div class=\"row\">\n" +
-    "        <div class=\"col-xs-4 text-center\">\n" +
-    "            <a ng-click=\"decrementHours()\" class=\"btn btn-link\"><i class=\"glyphicon glyphicon-chevron-down\"></i></a>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-xs-6 text-center\">\n" +
-    "            <a ng-click=\"decrementMinutes()\" class=\"btn btn-link\"><i class=\"glyphicon glyphicon-chevron-down\"></i></a>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-xs-2\"> </div>\n" +
-    "    </div>\n" +
+   "      <div class=\"row\">\n" +
+    "          <div class=\"col-xs-2\">\n" +
+    "              <a ng-click=\"decrementMinutes()\" class=\"btn btn-primary btn-block\" style=\"border-top-right-radius: 0; border-bottom-right-radius: 0;\"><i class=\"glyphicon glyphicon-minus\"></i></a>\n" +
+    "          </div>\n" +
+    "          <div class=\"col-xs-3\">\n" +
+    "              <div class=\"form-group\" ng-class=\"{'has-error': invalidHours}\" style=\"padding-bottom: 0px\">\n" +
+    "                  <select ng-model=\"hours\" ng-change=\"updateHours()\" class=\"form-control text-center\" style=\"border-radius: 0;\" ng-mousewheel=\"incrementHours()\" ng-readonly=\"readonlyInput\" maxlength=\"2\"> \n" +
+    "                   <option>06</option>\n" +
+    "                   <option>07</option>\n" +
+    "                   <option>08</option>\n" +
+    "                   <option>09</option>\n" +
+    "                   <option>10</option>\n" +
+    "                   <option>11</option>\n" +
+    "                   <option>12</option>\n" +
+    "                  </select>\n" +
+    "              </div>\n" +
+    "          </div>\n" +
+    "          <div class=\"col-xs-2\">\n" +
+    "              <span class=\"two-points\">:</span>\n" +
+    "          </div>\n" +
+    "          <div class=\"col-xs-3\">\n" +
+    "               <div class=\"form-group\" ng-class=\"{'has-error': invalidMinutes}\" style=\"padding-bottom: 0px\">\n" +
+    "                   <input type=\"text\" ng-model=\"minutes\" ng-change=\"updateMinutes()\" class=\"form-control text-center\" style=\"border-radius: 0;\" ng-readonly=\"readonlyInput\" maxlength=\"2\">\n" +
+    "               </div>\n" +
+    "          </div>\n" +
+    "          <div class=\"col-xs-2\">\n" +
+    "              <a ng-click=\"incrementMinutes()\" class=\"btn btn-primary btn-block\" style=\"border-top-left-radius: 0; border-bottom-left-radius: 0;\"><i class=\"glyphicon glyphicon-plus\"></i></a>\n" +
+    "          </div>\n" +
     "</span>");
 }]);
 
