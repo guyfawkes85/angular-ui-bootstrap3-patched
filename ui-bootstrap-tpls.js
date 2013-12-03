@@ -3557,14 +3557,17 @@ angular.module("template/tabs/tabset.html", []).run(["$templateCache", function(
 
 angular.module("template/timepicker/timepicker.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("template/timepicker/timepicker.html",
-    "<span>MODIFICATO\n" +
-   "      <div class=\"row\">\n" +
-    "          <div class=\"col-xs-2\">\n" +
-    "              <a ng-click=\"decrementMinutes()\" class=\"btn btn-primary btn-block\" style=\"border-top-right-radius: 0; border-bottom-right-radius: 0;\"><i class=\"glyphicon glyphicon-minus\"></i></a>\n" +
-    "          </div>\n" +
-    "          <div class=\"col-xs-3\">\n" +
+    "<span>\n" +
+    "      <div class=\"row\">\n" +
+    "          <div class=\"col-xs-5\">\n" +
     "              <div class=\"form-group\" ng-class=\"{'has-error': invalidHours}\" style=\"padding-bottom: 0px\">\n" +
     "                  <select ng-model=\"hours\" ng-change=\"updateHours()\" class=\"form-control text-center\" style=\"border-radius: 0;\" ng-mousewheel=\"incrementHours()\" ng-readonly=\"readonlyInput\" maxlength=\"2\"> \n" +
+    "                   <option>00</option>\n" +
+    "                   <option>01</option>\n" +
+    "                   <option>02</option>\n" +
+    "                   <option>03</option>\n" +
+    "                   <option>04</option>\n" +
+    "                   <option>05</option>\n" +
     "                   <option>06</option>\n" +
     "                   <option>07</option>\n" +
     "                   <option>08</option>\n" +
@@ -3572,19 +3575,32 @@ angular.module("template/timepicker/timepicker.html", []).run(["$templateCache",
     "                   <option>10</option>\n" +
     "                   <option>11</option>\n" +
     "                   <option>12</option>\n" +
+    "                   <option>13</option>\n" +
+    "                   <option>14</option>\n" +
+    "                   <option>15</option>\n" +
+    "                   <option>16</option>\n" +
+    "                   <option>17</option>\n" +
+    "                   <option>18</option>\n" +
+    "                   <option>19</option>\n" +
+    "                   <option>20</option>\n" +
+    "                   <option>21</option>\n" +
+    "                   <option>22</option>\n" +
+    "                   <option>23</option>\n" +
     "                  </select>\n" +
     "              </div>\n" +
     "          </div>\n" +
     "          <div class=\"col-xs-2\">\n" +
     "              <span class=\"two-points\">:</span>\n" +
     "          </div>\n" +
-    "          <div class=\"col-xs-3\">\n" +
+    "          <div class=\"col-xs-5\">\n" +
     "               <div class=\"form-group\" ng-class=\"{'has-error': invalidMinutes}\" style=\"padding-bottom: 0px\">\n" +
-    "                   <input type=\"text\" ng-model=\"minutes\" ng-change=\"updateMinutes()\" class=\"form-control text-center\" style=\"border-radius: 0;\" ng-readonly=\"readonlyInput\" maxlength=\"2\">\n" +
+    "                   <select ng-model=\"minutes\" ng-change=\"updateMinutes()\" class=\"form-control text-center\" style=\"border-radius: 0;\" ng-mousewheel=\"incrementMinutes()\" ng-readonly=\"readonlyInput\" maxlength=\"2\">\n" +
+    "                       <option>00</option>\n" +
+    "                       <option>15</option>\n" +
+    "                       <option>30</option>\n" +
+    "                       <option>45</option>\n" +
+    "                   </select>\n" +
     "               </div>\n" +
-    "          </div>\n" +
-    "          <div class=\"col-xs-2\">\n" +
-    "              <a ng-click=\"incrementMinutes()\" class=\"btn btn-primary btn-block\" style=\"border-top-left-radius: 0; border-bottom-left-radius: 0;\"><i class=\"glyphicon glyphicon-plus\"></i></a>\n" +
     "          </div>\n" +
     "</span>");
 }]);
@@ -3602,3 +3618,4 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
     "    </li>\n" +
     "</ul>");
 }]);
+
