@@ -3557,7 +3557,7 @@ angular.module("template/tabs/tabset.html", []).run(["$templateCache", function(
 
 angular.module("template/timepicker/timepicker.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("template/timepicker/timepicker.html",
-    "<span>\n" +
+    "<span>MODIFICATO\n" +
    "      <div class=\"row\">\n" +
     "          <div class=\"col-xs-2\">\n" +
     "              <a ng-click=\"decrementMinutes()\" class=\"btn btn-primary btn-block\" style=\"border-top-right-radius: 0; border-bottom-right-radius: 0;\"><i class=\"glyphicon glyphicon-minus\"></i></a>\n" +
