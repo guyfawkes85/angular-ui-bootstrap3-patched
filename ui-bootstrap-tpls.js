@@ -2969,8 +2969,8 @@ angular.module('ui.bootstrap.timepicker', [])
         if ( scope.showMeridian ) {
           hours = ( hours === 0 || hours === 12 ) ? 12 : hours % 12; // Convert 24 to 12 hour system
         }
-        scope.hours =  keyboardChange === 'h' ? hours : pad(hours);
-        scope.minutes = keyboardChange === 'm' ? minutes : pad(minutes);
+        scope.hours = hours
+        scope.minutes = minutes
         scope.meridian = selected.getHours() < 12 ? meridians[0] : meridians[1];
       }
 
@@ -3562,16 +3562,16 @@ angular.module("template/timepicker/timepicker.html", []).run(["$templateCache",
     "          <div class=\"col-xs-5\">\n" +
     "              <div class=\"form-group\" ng-class=\"{'has-error': invalidHours}\" style=\"padding-bottom: 0px\">\n" +
     "                  <select ng-model=\"hours\" ng-change=\"updateHours()\" class=\"form-control text-center\" style=\"border-radius: 0;\" ng-mousewheel=\"incrementHours()\" ng-readonly=\"readonlyInput\" maxlength=\"2\"> \n" +
-    "                   <option>00</option>\n" +
-    "                   <option>01</option>\n" +
-    "                   <option>02</option>\n" +
-    "                   <option>03</option>\n" +
-    "                   <option>04</option>\n" +
-    "                   <option>05</option>\n" +
-    "                   <option>06</option>\n" +
-    "                   <option>07</option>\n" +
-    "                   <option>08</option>\n" +
-    "                   <option>09</option>\n" +
+    "                   <option value=\"0\">00</option>\n" +
+    "                   <option value=\"1\">01</option>\n" +
+    "                   <option value=\"2\">02</option>\n" +
+    "                   <option value=\"3\">03</option>\n" +
+    "                   <option value=\"4\">04</option>\n" +
+    "                   <option value=\"5\">05</option>\n" +
+    "                   <option value=\"6\">06</option>\n" +
+    "                   <option value=\"7\">07</option>\n" +
+    "                   <option value=\"8\">08</option>\n" +
+    "                   <option value=\"9\">09</option>\n" +
     "                   <option>10</option>\n" +
     "                   <option>11</option>\n" +
     "                   <option>12</option>\n" +
@@ -3595,7 +3595,7 @@ angular.module("template/timepicker/timepicker.html", []).run(["$templateCache",
     "          <div class=\"col-xs-5\">\n" +
     "               <div class=\"form-group\" ng-class=\"{'has-error': invalidMinutes}\" style=\"padding-bottom: 0px\">\n" +
     "                   <select ng-model=\"minutes\" ng-change=\"updateMinutes()\" class=\"form-control text-center\" style=\"border-radius: 0;\" ng-mousewheel=\"incrementMinutes()\" ng-readonly=\"readonlyInput\" maxlength=\"2\">\n" +
-    "                       <option>00</option>\n" +
+    "                       <option value=\"0\">00</option>\n" +
     "                       <option>15</option>\n" +
     "                       <option>30</option>\n" +
     "                       <option>45</option>\n" +
